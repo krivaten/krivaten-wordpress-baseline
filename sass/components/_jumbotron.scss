@@ -1,0 +1,33 @@
+/**
+ * Jumbotron
+ */
+.jumbotron {
+	padding: 30px 15px;
+	position: relative;
+
+	.home & {
+		color: $primary-color;
+	}
+
+	h1 {
+		text-align: center;
+	}
+
+
+	@include media($screen-sm) {
+
+	}
+
+
+	@include media($screen-md) {
+
+		h1 {
+			font-size: 3em;
+		}
+
+	}
+
+	@include media($screen-lg) {
+
+	}
+}

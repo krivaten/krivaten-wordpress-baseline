@@ -1,0 +1,13 @@
+/**
+ * Columns
+ */
+.callout-container {
+
+	@include media($screen-sm) {
+		@include row();
+
+		.callout {
+			@include span-columns(1 of 3);
+		}
+	}
+}

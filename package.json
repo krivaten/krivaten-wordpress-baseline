@@ -1,0 +1,16 @@
+{
+  "name": "krivaten-wordpress",
+  "version": "1.0.0",
+  "dependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-imagemin": "~0.4.0",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-sass": "^0.8.1",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-rsync": "~0.2.1",
+    "grunt-csscomb": "^3.0.0",
+    "load-grunt-tasks": "~0.2.1"
+  }
+}

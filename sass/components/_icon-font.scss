@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "krivaten-icons";
+  src:url("../fonts/krivaten-icons.eot");
+  src:url("../fonts/krivaten-icons.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/krivaten-icons.woff") format("woff"),
+    url("../fonts/krivaten-icons.ttf") format("truetype"),
+    url("../fonts/krivaten-icons.svg#krivaten-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before,
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+	font-family: "krivaten-icons" !important;
+	font-style: normal !important;
+	font-weight: normal !important;
+	font-variant: normal !important;
+	text-transform: none !important;
+	speak: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+[data-icon]:before {
+	content: attr(data-icon);
+}
+
+.icon-align-justify:before {
+  content: "m";
+}
+.icon-archive:before {
+  content: "d";
+}
+.icon-book:before {
+  content: "e";
+}
+.icon-angle-down:before {
+  content: "f";
+}
+.icon-tags:before {
+  content: "l";
+}
+.icon-clock:before {
+  content: "p";
+}
+.icon-angle-left:before {
+  content: "q";
+}
+.icon-angle-right:before {
+  content: "r";
+}
+.icon-search-find:before {
+  content: "a";
+}
+.icon-blogger:before {
+  content: "b";
+}
+.icon-skype:before {
+  content: "c";
+}
+.icon-pinterest:before {
+  content: "g";
+}
+.icon-linkedin:before {
+  content: "h";
+}
+.icon-instagram:before {
+  content: "i";
+}
+.icon-houzz:before {
+  content: "j";
+}
+.icon-google-plus:before {
+  content: "k";
+}
+.icon-facebook:before {
+  content: "n";
+}
+.icon-twitter:before {
+  content: "o";
+}
+.icon-check-mark-circle:before {
+  content: "u";
+}
+.icon-delete-circle:before {
+  content: "v";
+}
+.icon-minus-circle:before {
+  content: "w";
+}
+.icon-plus-circle:before {
+  content: "x";
+}
+.icon-quote-left:before {
+  content: "y";
+}
+.icon-quote-right:before {
+  content: "z";
+}

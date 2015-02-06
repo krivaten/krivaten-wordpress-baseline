@@ -1,0 +1,90 @@
+// Typography
+$base-font-family: 'Open Sans', sans-serif;
+$header-font-family: $base-font-family;
+$icon-font-family: 'krivaten-icons';
+
+// Font Sizes
+$base-font-size: 1.25em;
+$h1-font-size: $base-font-size * 1.75;
+$h2-font-size: $base-font-size * 1.55;
+$h3-font-size: $base-font-size * 1.35;
+$h4-font-size: $base-font-size * 1.15;
+$h5-font-size: $base-font-size;
+$h6-font-size: $base-font-size;
+
+// Line height
+$base-line-height: 1.5;
+$header-line-height: 1.25;
+
+// Other Sizes
+$base-border-radius: 0;
+$base-spacing: $base-line-height * 1em;
+$base-z-index: 0;
+
+// Colors
+$black: #0E0E20;
+$white: #F0E9E5;
+
+$primary-color: #64B6A2 !default;
+$secondary-color: #C24941 !default;
+$tertiary-color: #46433A !default;
+
+$danger-color: #d9534f;
+
+// Background Color
+$base-background-color: $white;
+
+// Font Colors
+$base-font-color: $black;
+$base-accent-color: $tertiary-color;
+
+// Link Colors
+$base-link-color: $base-accent-color;
+$hover-link-color: darken($base-accent-color, 15%);
+$base-button-color: $base-link-color;
+$hover-button-color: $hover-link-color;
+
+// Border color
+$base-border-color: darken($white, 15%);
+$base-border: 1px solid $base-border-color;
+
+// Forms
+$form-background-color: darken($white, 10%);
+$form-placeholder-color: darken($white, 30%);
+$form-border-color: transparent;
+$form-border-color-hover: darken($white, 30%);
+$form-border-color-focus: darken($white, 30%);
+$form-border-radius: $base-border-radius;
+$form-box-shadow: none;
+$form-box-shadow-focus: $form-box-shadow;
+$form-font-size: $base-font-size;
+$form-font-family: $base-font-family;
+
+// Navbar
+$navbar-height-base: 50px;
+$navbar-height-md: 110px;
+
+$navbar-logo-width-sm: 45px;
+$navbar-logo-height-sm: auto;
+$navbar-logo-width-md: 90px;
+$navbar-logo-height-md: auto;
+
+// Breakpoints
+// $screen-xs: new-breakpoint(max-width 480px);
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1200px;
+
+// Container
+$container-padding: 15px;
+
+$container-sm: 750px + ($container-padding * 2);
+$container-md: 940px + ($container-padding * 2);
+$container-lg: 1140px + ($container-padding * 2);
+
+// Carousel
+$carousel-control-color: $white;
+
+// Animations
+$timing-duration: 0.5s;
+$timing-function: cubic-bezier(0.10, 0.70, 0.10, 1);

@@ -1,0 +1,39 @@
+.btn,
+button,
+input[type='submit'] {
+	@include transition(all 0.2s ease-in-out);
+	@extend %button;
+	@include appearance(none);
+
+	cursor: pointer;
+	user-select: none;
+	vertical-align: middle;
+	white-space: nowrap;
+	text-transform: uppercase;
+
+	border: none;
+
+	font-family: $base-font-family;
+}
+
+.btn-primary {
+	background-color: $primary-color;
+	display: block;
+
+	&:hover {
+		background-color: darken($primary-color, 15%);
+	}
+}
+
+.btn-link {
+	color: $secondary-color;
+	border: 0;
+	background: transparent;
+
+	&:hover,
+	&:active,
+	&.active {
+		color: darken($secondary-color, 5%);
+		background: transparent;
+	}
+}

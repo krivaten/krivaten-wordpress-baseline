@@ -1,0 +1,9 @@
+{
+  "name": "ember-app-kit",
+  "dependencies": {
+    "html5shiv": "~3.7.0",
+    "respond": "~1.4.2",
+    "bourbon": "~4.0",
+    "neat": "~1.7.0"
+  }
+}

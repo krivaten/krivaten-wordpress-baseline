@@ -1,0 +1,186 @@
+/**
+ * Carousel
+ */
+
+// Wrapper for the slide container and indicators
+.carousel {
+  position: relative;
+
+  &:hover {
+    .carousel-control {
+      &.right, &.left {
+        .carousel-icon {
+          opacity: 1;
+          @include transform(translate3d(0, -50%, 0));
+        }
+      }
+    }
+
+    .carousel-indicators {
+      opacity: 1;
+      @include transform(translate3d(0, 0, 0));
+    }
+  }
+}
+
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  > .item {
+    display: none;
+    position: relative;
+    @include transition(.6s ease-in-out left);
+
+    // Account for jankitude on images
+    > img,
+    > a > img {
+      line-height: 1;
+    }
+
+    // WebKit CSS3 transforms for supported devices
+    @media all and (transform-3d), (-webkit-transform-3d) {
+      transition: transform .6s ease-in-out;
+      backface-visibility: hidden;
+      perspective: 1000;
+
+      &.next,
+      &.active.right {
+        transform: translate3d(100%, 0, 0);
+        left: 0;
+      }
+      &.prev,
+      &.active.left {
+        transform: translate3d(-100%, 0, 0);
+        left: 0;
+      }
+      &.next.left,
+      &.prev.right,
+      &.active {
+        transform: translate3d(0, 0, 0);
+        left: 0;
+      }
+    }
+  }
+
+  > .active,
+  > .next,
+  > .prev {
+    display: block;
+  }
+
+  > .active {
+    left: 0;
+  }
+
+  > .next,
+  > .prev {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  > .next {
+    left: 100%;
+  }
+  > .prev {
+    left: -100%;
+  }
+  > .next.left,
+  > .prev.right {
+    left: 0;
+  }
+
+  > .active.left {
+    left: -100%;
+  }
+  > .active.right {
+    left: 100%;
+  }
+
+}
+
+// Left/right controls for nav
+// ---------------------------
+
+.carousel-control {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  color: $carousel-control-color;
+  text-align: center;
+  width: 20%;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $carousel-control-color;
+  }
+
+  // Set gradients for backgrounds
+  &.right {
+    right: 0;
+
+    .carousel-icon {
+      right: 10px;
+      @include transform(translate3d(-10px, -50%, 0));
+    }
+  }
+  
+  &.left {
+    left: 0;
+    .carousel-icon {
+      left: 10px;
+      @include transform(translate3d(10px, -50%, 0));
+    }
+  }
+
+  .carousel-icon {
+    opacity: 0;
+    @include transition(all $timing-duration $timing-function);
+    position: absolute;
+    font-size: 3em;
+    top: 50%;
+  }
+}
+
+// Optional indicator pips
+//
+// Add an unordered list with the following class and add a list item for each
+// slide your carousel holds.
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  z-index: 15;
+  width: 60%;
+  margin-left: -30%;
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+  opacity: 0;
+  @include transition(all $timing-duration $timing-function);
+  @include transform(translate3d(0, -10px, 0));
+
+  li {
+    @include transition(background-color 0.2s ease-in-out);
+    display: inline-block;
+    width:  10px;
+    height: 10px;
+    margin: 1px;
+    text-indent: -999px;
+    border: 1px solid $carousel-control-color;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgba($carousel-control-color, 0);
+  }
+  .active {
+    margin: 0;
+    width:  12px;
+    height: 12px;
+    background-color: rgba($carousel-control-color, 1);
+  }
+}

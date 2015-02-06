@@ -1,0 +1,134 @@
+/**
+ * Gravity Forms
+ */
+.gform_wrapper {
+	ul {
+		list-style-type: none;
+		padding: 0;
+	}
+	.gfield_required {
+		color: $danger-color;
+		font-weight: bold;
+	}
+
+	.gfield_radio, .gfield_checkbox {
+		input {
+			display: none;
+
+
+			&:checked {
+				+ label {
+					color: $primary-color;
+
+					&:before {
+						background: rgba($primary-color, 1);
+					}
+				}
+			}
+		}
+		label {
+			line-height: 40px;
+			cursor: pointer;
+			padding-left: 15px;
+
+			&:hover {
+				background: darken($white, 5%);
+			}
+			&:before {
+				@include transition(background 0.2s ease-in-out);
+				position: relative;
+				display: inline-block;
+				background: rgba($primary-color, 0);
+				content: '';
+				margin-right: 5px;
+				top: 3px;
+				width: 1em;
+				height: 1em;
+				border: 1px solid $primary-color;
+				text-align: center;
+			}
+		}
+	}
+
+	.gfield_radio {
+		label {
+			&:before {
+				border-radius: 50%;
+			}
+		}
+	}
+
+	.gfield_description {
+		font-size: 80%;
+		font-style: italic;
+	}
+
+	.gform_validation_container {
+		display: none;
+	}
+}
+
+.ginput_full, .ginput_left, .ginput_right {
+	label {
+		font-size: 0.75em;
+		margin: -15px 0 0 0;
+		padding-bottom: 15px;
+		font-style: italic;
+	}
+}
+
+.ginput_left, .ginput_right {
+	display: block;
+	width: 49%;
+	float: left;
+}
+
+.ginput_left {
+	margin-right: 2%;
+
+	&:last-of-type {
+		label {
+			padding-bottom: 0;
+		}
+	}
+}
+
+.gf_clear {
+	@include clearfix();
+}
+
+.ginput_complex {
+	@include clearfix();
+
+}
+.validation_message, .validation_error {
+	clear: both;
+	padding-bottom: 15px;
+	margin-top: -15px;
+	color: $tertiary-color;
+	font-style: italic;
+}
+.gform_drop_area {
+	@include clearfix();
+	border-radius: 10px;
+	padding: 15px;
+	background: $primary-color;
+
+	.gform_drop_instructions {
+		float: left;
+		width: 50%;
+		padding-right: 15px;
+		color: $white;
+		text-align: right;
+		line-height: 34px;
+		height: 50px;
+		line-height: 50px;
+	}
+	.gform_button_select_files {
+		@extend button;
+		background: $white;
+		color: $tertiary-color;
+		float: left;
+		width: auto;
+	}
+}

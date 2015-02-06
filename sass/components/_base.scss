@@ -1,0 +1,58 @@
+/**
+ * Base styles
+ */
+html,
+body {
+	height: 100%;
+	background: $white;
+}
+
+html {
+	overflow-y: scroll;
+}
+
+.clearfix {
+	@include clearfix();
+}
+
+.container {
+	padding-left: $container-padding;
+	padding-right: $container-padding;
+	position: relative;
+
+	@include media($screen-sm) {
+		@include outer-container($container-md);
+	}
+	@include media($screen-md) {
+	}
+	@include media($screen-lg) {
+		max-width: $container-lg;
+	}
+	&.container-sm {
+		@include media($screen-sm) {
+			max-width: $container-sm;
+		}
+	}
+}
+
+
+.or {
+	text-align: center;
+	position: relative;
+	margin: 13px 0;
+	font-style: italic;
+	&:before, &:after {
+		content: '';
+		display: block;
+		width: 45%;
+		position: absolute;
+		top: 50%;
+		border-top: 1px solid darken($white, 25%);
+	}
+	&:before {
+		left: 0;
+	}
+	&:after {
+		right: 0;
+	}
+}

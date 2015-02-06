@@ -1,0 +1,44 @@
+/**
+ * Content
+ */
+.article-well,
+.article-meta {
+	padding: $container-padding;
+	font-size: 80%;
+	margin-top: $container-padding;
+
+}
+.article-well {
+	background: lighten($white, 5%);
+}
+.article-meta {
+	background: darken($white, 5%);
+
+	> div {
+		padding-left: 1.5em;
+		position: relative;
+
+		i {
+			position: absolute;
+			left: 0;
+			top: 4px;
+		}
+	}
+}
+
+.article-lead {
+	font-style: italic;
+	font-size: 1.25em;
+	line-height: 1.75em;
+}
+.article-pager {
+	padding: 15px 0;
+	list-style-type: none;
+
+	.previous {
+		float: left;
+	}
+	.next {
+		float: right;
+	}
+}
