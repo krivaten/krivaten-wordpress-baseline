@@ -9,6 +9,7 @@
  * All the customizable settings
  */
 @import 'variables';
+@import 'mixins';
 
 /**
  * Bourbon
@@ -55,3 +56,5 @@
 /**
  * Pages
  */
+@import 'pages/home';
+@import 'pages/videos';

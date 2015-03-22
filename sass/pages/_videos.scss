@@ -1,0 +1,20 @@
+/**
+ * Videos page styles
+ */
+.videos {
+
+	.video-row {
+
+		> div {
+			margin-bottom: 16px;
+		}
+
+		@include media($screen-sm) {
+			@include row();
+
+			> div {
+				@include span-columns(6);
+			}
+		}
+	}
+}

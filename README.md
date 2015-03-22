@@ -31,7 +31,7 @@ I did my best to create shortcodes for all the Bootstrap elements (And then some
 ```
 **Circle Icon**
 ```
-[circle_icon icon="fa-star" (class="")] 
+[circle_icon icon="fa-star" (class="")]
 ```
 **Grid**
 ```
@@ -40,7 +40,7 @@ I did my best to create shortcodes for all the Bootstrap elements (And then some
 ```
 **Icon**
 ```
-[icon icon="fa-ok" (class="")] 
+[icon icon="fa-ok" (class="")]
 ```
 **Map**
 ```
@@ -64,7 +64,7 @@ I did my best to create shortcodes for all the Bootstrap elements (And then some
 ```
 **YouTube Video**
 ```
-[youtube video="1aBSPn2P9bg" (title="YouTube Video")] 
+[youtube video="1aBSPn2P9bg" (title="YouTube Video")]
 ```
 
 ##Examples##
@@ -87,3 +87,12 @@ I did my best to create shortcodes for all the Bootstrap elements (And then some
 
 ##Todos##
 * Create custom menu walker for side nav
+
+
+UPDATE `meybro78_wp`.`sc_options` SET `option_value` = replace(option_value, 'http://meyerbrothersandsons.com/stellarcabinetry', 'http://stellarcabinetry.com') WHERE `sc_options`.`option_name` = 'home' OR `sc_options`.`option_name` = 'siteurl';
+
+UPDATE `meybro78_wp`.`sc_posts` SET guid = replace(guid, 'http://meyerbrothersandsons.com/stellarcabinetry', 'http://stellarcabinetry.com');
+
+UPDATE `meybro78_wp`.`sc_posts` SET post_content = replace(post_content, 'http://meyerbrothersandsons.com/stellarcabinetry', 'http://stellarcabinetry.com');
+
+UPDATE `meybro78_wp`.`sc_postmeta` SET meta_value = replace(meta_value,'http://meyerbrothersandsons.com/stellarcabinetry','http://stellarcabinetry.com');

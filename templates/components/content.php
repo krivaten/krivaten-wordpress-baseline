@@ -34,7 +34,6 @@
 
 	<article>
 		<?php the_content(); ?>
-		<?php edit_post_link('Edit this post', '<p>', '</p>'); ?>
 		<?php if(is_single()) require_once(TEMPLATEPATH . '/templates/components/meta.php' );?>
 	</article>
 <?php endwhile; ?>

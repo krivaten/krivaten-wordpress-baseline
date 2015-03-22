@@ -12,4 +12,4 @@ function sc_youtube($atts) {
 	return preg_replace("/\s+/", " ", $return);
 }
 
-// [youtube video="1aBSPn2P9bg" (title="YouTube Video")]
+// [youtube video="1aBSPn2P9bg"]

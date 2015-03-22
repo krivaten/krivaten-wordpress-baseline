@@ -16,8 +16,13 @@ h5,
 h6 {
 	font-family: $header-font-family;
 	line-height: $header-line-height;
-	font-weight: normal;
+	font-weight: 300;
+	color: $primary-color;
 	margin: 10px 0 5px;
+
+	span {
+		font-weight: 700;
+	}
 }
 
 h1 {
@@ -91,7 +96,7 @@ blockquote {
 		top: 0;
 		left: 0;
 		font-size: 3em;
-		opacity: 0.15;
+		opacity: 0.1;
 	}
 }
 

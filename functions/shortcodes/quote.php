@@ -4,10 +4,10 @@ function sc_quote($atts, $content = null){
 		array(
 			'source' => null
 		),
-		$atts) 
+		$atts)
 	);
 	return '<blockquote>'.do_shortcode(trim($content)).($source?'<small><cite title="'.$source.'">'.$source.'</cite></small>':'').'</blockquote>';
 }
 
-// [quote]Content[/quote]
+// [quote source="name"]Content[/quote]
 ?>

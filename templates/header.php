@@ -11,7 +11,7 @@
 
 	<title><?php wp_title(''); ?></title>
 
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700|Merriweather:400,400italic,700' rel='stylesheet' type='text/css'>
 
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/assets/css/css.css" />
 	<!--[if lt IE 9]>

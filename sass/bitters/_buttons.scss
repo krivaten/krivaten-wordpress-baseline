@@ -16,6 +16,11 @@ input[type='submit'] {
 	font-family: $base-font-family;
 }
 
+
+.btn-block {
+	display: block;
+}
+
 .btn-primary {
 	background-color: $primary-color;
 	display: block;
@@ -26,14 +31,15 @@ input[type='submit'] {
 }
 
 .btn-link {
-	color: $secondary-color;
+	color: $primary-color;
 	border: 0;
-	background: transparent;
+	background: #fff;
 
 	&:hover,
 	&:active,
 	&.active {
-		color: darken($secondary-color, 5%);
-		background: transparent;
+		color: darken($primary-color, 5%);
+		background: darken(#fff, 5%);
 	}
 }
+

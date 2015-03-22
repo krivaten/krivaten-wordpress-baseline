@@ -53,6 +53,10 @@ function kvt_settings() {
 		$urlSkype = esc_attr($_POST["kvt_skype_url"]);
 		update_option("kvt_skype_url", $urlSkype);
 
+		$urlVideo = esc_attr($_POST["kvt_video_url"]);
+		update_option("kvt_video_url", $urlVideo);
+
+
 		$googleAnalytics = esc_attr($_POST["kvt_google_analytics"]);
 		update_option("kvt_google_analytics", $googleAnalytics);
 
@@ -73,6 +77,7 @@ function kvt_settings() {
 	$urlGoogle      = get_option("kvt_google_url");
 	$urlPinterest   = get_option("kvt_pinterest_url");
 	$urlSkype       = get_option("kvt_skype_url");
+	$urlVideo       = get_option("kvt_video_url");
 
 	$googleAnalytics = get_option("kvt_google_analytics");
 
@@ -179,6 +184,14 @@ function kvt_settings() {
 					</th>
 					<td>
 						<input type="text" id="kvt_skype_url" name="kvt_skype_url" value="<?php echo $urlSkype;?>" size="25" />
+					</td>
+				</tr>
+				<tr valign="top">
+					<th scope="row">
+						<label for="kvt_video_url">Video Url:</label>
+					</th>
+					<td>
+						<input type="text" id="kvt_video_url" name="kvt_video_url" value="<?php echo $urlVideo;?>" size="25" />
 					</td>
 				</tr>
 			</table>

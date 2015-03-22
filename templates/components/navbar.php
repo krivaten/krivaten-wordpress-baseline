@@ -1,7 +1,7 @@
 <header class="navbar" role="banner">
 
 	<a href="<?php echo get_option('home'); ?>/" title="<?php bloginfo('name'); ?>" class="navbar-logo">
-		<img src="<?php bloginfo('template_directory'); ?>/assets/img/logo.png" />
+		Soul<span>Whisperer</span>
 	</a>
 
 	<button type="button" class="navbar-drawer-trigger btn-link" data-toggle="toggle-drawer">
@@ -20,9 +20,6 @@
 					));
 				}
 			?>
-			<div class="navbar-social-icons">
-				<?php require(TEMPLATEPATH . '/templates/components/social-icons.php'); ?>
-			</div>
 		</div>
 	</div>
 </header>

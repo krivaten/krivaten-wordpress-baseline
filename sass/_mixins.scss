@@ -1,0 +1,19 @@
+/**
+ * Vertically align item
+ */
+@mixin vertical-align($amount: 50%) {
+	@include transform(translateY(-$amount));
+
+	position: absolute;
+	top: $amount;
+}
+
+@mixin vertical-horizontal-align($width: 100%) {
+	@include transform(translate(-50%, -50%));
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	width: $width;
+}

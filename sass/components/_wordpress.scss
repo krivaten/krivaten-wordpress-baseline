@@ -11,3 +11,13 @@
 		color: $tertiary-color;
 	}
 }
+
+.alignleft {
+	float: left;
+	margin: 15px 15px 15px 0;
+}
+
+.alignright {
+	float: right;
+	margin: 15px 0 15px 15px;
+}

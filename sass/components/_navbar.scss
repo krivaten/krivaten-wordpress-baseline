@@ -10,7 +10,8 @@ body {
 }
 
 .navbar {
-	background: $black;
+	font-family: $sans-serif-font-family;
+	background: $white;
 	min-height: $navbar-height-base;
 	position: fixed;
 	width: 100%;
@@ -26,22 +27,28 @@ body {
 	}
 
 	.navbar-logo {
+		line-height: ($navbar-height-base - 10);
+		font-size: 1.2em;
+		text-transform: uppercase;
 		position: absolute;
 		top: 5px;
 		left: 5px;
+		color: $primary-color;
 
-		img {
-			width: $navbar-logo-width-sm;
-			height: $navbar-logo-height-sm;
+		span {
+			color: $black;
+			font-weight: 700;
 		}
 	}
 
 	.navbar-drawer-trigger {
 		@include transition(color 0.2s ease-in-out);
+		color: $primary-color;
 		position: absolute;
-		right: 5px;
+		right: 0;
 		top: 0;
 		padding-right: 35px;
+		background: transparent;
 
 		&:before, &:after {
 			@include transition(all $timing-duration $timing-function);
@@ -67,7 +74,7 @@ body {
 
 		.icon {
 			position: absolute;
-			top: 12px;
+			top: 10px;
 			right: 2px;
 			font-size: (4em / 3);
 			line-height: (3em / 4);
@@ -78,7 +85,6 @@ body {
 	&.navbar-drawer-open {
 
 		.navbar-drawer-trigger {
-			color: darken($secondary-color, 5%);
 
 			&:before {
 				@include transform(translateX(30px));
@@ -107,11 +113,14 @@ body {
 
 	.navbar-drawer-content {
 		border-top: 1px solid darken($white, 10%);
-		padding: 10px;
+		padding: 10px 0;
 
 		a {
+			display: block;
+			padding: 5px 15px;
+
 			&:hover, &:active {
-				color: $secondary-color;
+				color: $black;
 			}
 		}
 	}
@@ -124,7 +133,7 @@ body {
 		}
 
 		li {
-
+			height:
 			a {
 				@include transition(all 0.2s ease-in-out);
 				display: block;
@@ -134,18 +143,7 @@ body {
 		}
 	}
 
-	.navbar-social-icons {
-		text-align: center;
-
-		a {
-			font-size: 1.5em;
-			margin: 0 5px;
-			color: $secondary-color;
-		}
-	}
-
 	@include media($screen-md) {
-		background: $black;
 		min-height: $navbar-height-md;
 		border-bottom: 0;
 
@@ -154,8 +152,8 @@ body {
 		}
 
 		.navbar-logo {
-			top: 15px;
-			left: 15px;
+			line-height: ($navbar-height-md - 10);
+			font-size: 1.5em;
 
 			img {
 				width: $navbar-logo-width-md;
@@ -179,11 +177,27 @@ body {
 		.navbar-drawer-menu, .navbar-social-icons {
 			position: absolute;
 			top: 50%;
+
+			li {
+				a {
+					height: $navbar-height-md;
+					line-height: $navbar-height-md;
+					padding: 0 15px;
+					display: inline-block;
+					color: $black;
+				}
+				&.current-menu-item {
+					a {
+						color: $black;
+						background: $secondary-color;
+					}
+				}
+			}
 		}
 
 		.navbar-drawer-menu {
-			@include transform(translate(-50%, -50%));
-			left: 50%;
+			@include transform(translateY(-50%));
+			right: 0;
 
 			li {
 				display: inline-block;

@@ -42,3 +42,28 @@
 		float: right;
 	}
 }
+
+main {
+	section {
+		padding: 40px 0;
+	}
+	.feature {
+		background: $secondary-color;
+
+		h2 {
+			text-align: center;
+			font-family: $sans-serif-font-family;
+			font-weight: 300;
+			color: $primary-color;
+		}
+	}
+
+	a {
+		font-weight: bold;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		a {
+			font-weight: 300;
+		}
+	}
+}

@@ -9,6 +9,11 @@
 		echo '<a href="'.kvt_add_http($urlFacebook).'" title="View Facebook Page" target="_blank"><i class="icon icon-facebook"></i></a>';
 	}
 
+	$urlVideo = get_option("kvt_video_url");
+	if($urlVideo != "") {
+		echo '<a href="'.kvt_add_http($urlVideo).'" title="View Video Page" target="_blank"><i class="icon icon-video-camera"></i></a>';
+	}
+
 	$urlTwitter = get_option("kvt_twitter_url");
 	if($urlTwitter != "") {
 		echo '<a href="'.kvt_add_http($urlTwitter).'" title="View Twitter Page" target="_blank"><i class="icon icon-twitter"></i></a>';
@@ -53,10 +58,7 @@
 	if($urlSkype != "") {
 		echo '<a href="'.kvt_add_http($urlSkype).'" title="View Skype Page" target="_blank"><i class="icon icon-skype"></i></a>';
 	}
-	/*
-	$urlFeed = get_option("kvt_feed_url");
 	if($urlFeed != "") {
 		echo '<a href="'.kvt_add_http($urlFeed).'" title="View Feed Page" target="_blank"><i class="icon icon-rss"></i></a>';
 	}
-	*/
-?>
+

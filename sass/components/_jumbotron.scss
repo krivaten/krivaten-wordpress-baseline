@@ -4,25 +4,126 @@
 .jumbotron {
 	padding: 30px 15px;
 	position: relative;
+	background:	$black url(../img/jumbotron.png) center center;
+	background-size: contain;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 
+	.jumbotron-title {
+		text-align: center;
+		padding-bottom: 90px;
+		width: 100%;
+		 h1, p {
+		 	color: $white;
+		 }
+		 p {
+		 	font-size: 1.25em;
+		 	font-style: italic;
+		 }
+	}
 	.home & {
+		min-height: 400px;
 		color: $primary-color;
+		background:
+			url(../img/gary.png) right bottom no-repeat,
+			$black url(../img/jumbotron.png) center center;
+
+		h1 {
+			width: 100%;
+			margin: 0 -15px;
+			padding: 0 15px;
+		}
 	}
 
 	h1 {
 		text-align: center;
+		text-transform: lowercase;
+		color: $white;
+		font-size: 3em;
+		font-weight: 300;
+
+		span {
+			font-weight: 700;
+		}
 	}
 
+	.jumbotron-footer-container {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		background: rgba(255, 255, 255, 0.1);
+		margin: 0 -15px;
+		padding: 5px 15px;
+	}
+	.jumbotron-footer-callouts {
+		line-height: 40px;
+		font-style: italic;
+		text-align: center;
+
+		.jumbotron-footer-callout {
+
+			&:nth-of-type(2) {
+				display: none;
+			}
+		}
+
+		a {
+			&, &:hover, &:focus {
+				color: $white;
+				text-decoration: none;
+			}
+		}
+	}
+
+	@include media($screen-xs) {
+		.home & {
+			.jumbotron-title {
+				@include vertical-align();
+			}
+		}
+	}
 
 	@include media($screen-sm) {
 
+		.home & {
+			min-height: 650px;
+		}
+		.jumbotron-footer-callouts {
+			@include outer-container($container-sm);
+			@include row();
+			.jumbotron-footer-callout {
+				@include span-columns(1 of 3);
+
+				&:nth-of-type(2) {
+					display: block;
+				}
+			}
+		}
+
+		.jumbotron-title {
+			padding-bottom: 50px;
+		}
+
+		h1 {
+			font-size: 4.5em;
+		}
+
+		.social-icons {
+			height: 40px;
+			padding-top: 2px;
+
+			a {
+				margin: 0 5px;
+			}
+			.icon {
+				font-size: 1.25em;
+			}
+		}
 	}
 
 
 	@include media($screen-md) {
-
-		h1 {
-			font-size: 3em;
+		.jumbotron-footer-callouts {
+			@include outer-container($container-md);
 		}
 
 	}

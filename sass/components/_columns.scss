@@ -11,3 +11,42 @@
 		}
 	}
 }
+
+.product-details {
+	.product-image {
+		img {
+			display: block;
+			margin: 0 auto;
+			width: 50%;
+		}
+	}
+}
+
+.product-options {
+	margin: 15px 0;
+}
+@include media($screen-sm) {
+	.product-details {
+		@include row(table);
+		.product-image {
+			@include span-columns(1 of 4, table);
+			vertical-align: middle;
+			padding-right: 15px;
+			img {
+				width: 100%;
+			}
+		}
+		.product-description {
+			@include span-columns(3 of 4, table);
+			vertical-align: middle;
+			padding-left: 15px;
+		}
+	}
+	.product-options {
+		@include row(table);
+
+		.btn {
+			@include span-columns(1 of 2, table);
+		}
+	}
+}
