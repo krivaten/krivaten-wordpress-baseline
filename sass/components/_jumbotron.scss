@@ -4,9 +4,49 @@
 .jumbotron {
 	padding: 30px 15px;
 	position: relative;
+	background: $light-blue url(../img/portrait.png) center bottom no-repeat;
 
 	.home & {
-		color: $primary-color;
+		position: relative;
+		height: 100%;
+		background: $light-blue url(../img/portrait.png) center bottom no-repeat;
+		background-size: contain;
+
+		@include media($screen-sm) {
+			background-position: left bottom;
+
+			.jumbotron___logo {
+				@include transform(translateY(-50%));
+				top: 50%;
+				left: initial;
+				right: $base-padding;
+
+				height: 250px;
+			}
+
+			.jumbotron___title {
+				top: initial;
+				bottom: $base-padding;
+				font-size: 2.5em;
+			}
+		}
+	}
+
+	.jumbotron___logo {
+		position: absolute;
+		top: $base-padding;
+		left: $base-padding;
+		height: 85px;
+	}
+
+	.jumbotron___title {
+		height: 85px;
+		line-height: 85px;
+		position: absolute;
+		top: $base-padding;
+		right: $base-padding;
+		margin: 0;
+		font-size: 1em;
 	}
 
 	h1 {

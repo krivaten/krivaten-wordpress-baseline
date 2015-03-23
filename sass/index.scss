@@ -4,23 +4,20 @@
  */
 @import 'normalize';
 
+
 /**
  * Variables
  * All the customizable settings
  */
 @import 'variables';
 
+
 /**
  * Bourbon
  * A super mixin library
  */
-@import '../vendor/bourbon/dist/bourbon';
+@import '../vendor/bourbon/app/assets/stylesheets/bourbon';
 
-/**
- * Bitters
- * A type of normalize
- */
-@import 'bitters/base';
 
 /**
  * Neat
@@ -30,21 +27,40 @@
 
 
 /**
+ * Bitters
+ */
+@import 'bitters/typography';
+@import 'bitters/forms';
+@import 'bitters/tables';
+@import 'bitters/lists';
+
+
+/**
  * Components
  */
 @import 'components/base';
-@import 'components/carousel';
 @import 'components/columns';
 @import 'components/icon-font';
-@import 'components/gravity-form';
-@import 'components/gallery';
 @import 'components/list-group';
 @import 'components/responsive-embed';
 @import 'components/navbar';
 @import 'components/content';
 @import 'components/jumbotron';
 @import 'components/footer';
-@import 'components/wordpress';
+
+
+/**
+ * Plugins
+ */
+@import 'plugins/gravity-form';
+
+
+/**
+ * Wordpress
+ */
+@import 'wordpress/base';
+@import 'wordpress/gallery';
+
 
 /**
  * Shortcodes

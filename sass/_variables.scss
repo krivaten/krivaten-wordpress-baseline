@@ -5,11 +5,11 @@ $icon-font-family: 'krivaten-icons';
 
 // Font Sizes
 $base-font-size: 1.25em;
-$h1-font-size: $base-font-size * 1.75;
-$h2-font-size: $base-font-size * 1.55;
-$h3-font-size: $base-font-size * 1.35;
-$h4-font-size: $base-font-size * 1.15;
-$h5-font-size: $base-font-size;
+$h1-font-size: $base-font-size * 2;
+$h2-font-size: $base-font-size * 1.8;
+$h3-font-size: $base-font-size * 1.6;
+$h4-font-size: $base-font-size * 1.4;
+$h5-font-size: $base-font-size * 1.2;
 $h6-font-size: $base-font-size;
 
 // Line height
@@ -20,14 +20,24 @@ $header-line-height: 1.25;
 $base-border-radius: 0;
 $base-spacing: $base-line-height * 1em;
 $base-z-index: 0;
+$base-padding: 16px;
 
 // Colors
+$brown: #735234;
+$green: #64B6B1;
+$tan: #F0E9E5;
+$black: #46433A;
+$white: #F9F9F9;
+$red: #C24941;
+
+$light-blue: #e6edf2;
+
 $black: #0E0E20;
 $white: #F0E9E5;
 
-$primary-color: #64B6A2 !default;
-$secondary-color: #C24941 !default;
-$tertiary-color: #46433A !default;
+$primary-color: #64B6A2;
+$secondary-color: #C24941;
+$tertiary-color: #46433A;
 
 $danger-color: #d9534f;
 
@@ -70,20 +80,15 @@ $navbar-logo-width-md: 90px;
 $navbar-logo-height-md: auto;
 
 // Breakpoints
-// $screen-xs: new-breakpoint(max-width 480px);
 $screen-sm: 768px;
 $screen-md: 992px;
 $screen-lg: 1200px;
 
 // Container
 $container-padding: 15px;
-
 $container-sm: 750px + ($container-padding * 2);
 $container-md: 940px + ($container-padding * 2);
 $container-lg: 1140px + ($container-padding * 2);
-
-// Carousel
-$carousel-control-color: $white;
 
 // Animations
 $timing-duration: 0.5s;
