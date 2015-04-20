@@ -1,6 +1,7 @@
-<section class="jumbotron">
+<div class="jumbotron">
+	<img src="<?php bloginfo('template_directory'); ?>/assets/img/logo.svg" class="jumbotron___logo" />
 	<?php if(is_page('home')) { ?>
-		<h1><?php the_title(); ?></h1>
+		<h1 class="jumbotron___title"><?php the_title(); ?></h1>
 	<?php } else { ?>
 		<?php if(is_tax()) { ?>
 			<h1><?php single_tag_title(); ?></h1>
@@ -27,4 +28,4 @@
 		<?php } ?>
 
 	<?php } ?>
-</section>
+</div>
