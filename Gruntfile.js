@@ -63,7 +63,7 @@ module.exports = function(grunt) {
 				dynamic_mappings: {
 				expand: true,
 				cwd: 'sass',
-				src: ['sass/components/**/*.scss', 'sass/pages/**/*.scss', 'sass/index.scss', 'sass/normalize.scss'],
+				src: ['**/*.scss', '!index.scss', '!base/**/*.scss'],
 				dest: 'sass',
 				ext: '.scss'
 			}

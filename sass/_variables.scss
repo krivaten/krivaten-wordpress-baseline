@@ -1,7 +1,6 @@
 // Typography
 $sans-serif-font-family: 'Lato', sans-serif;
 $serif-font-family: 'Merriweather', serif;
-
 $base-font-family: $serif-font-family;
 $header-font-family: $sans-serif-font-family;
 $icon-font-family: 'krivaten-icons';
@@ -27,11 +26,9 @@ $base-z-index: 0;
 // Colors
 $black: #24252a;
 $white: #f5f5f5;
-
 $primary-color: #5b7180 !default;
 $secondary-color: #e6e6e6 !default;
-$tertiary-color: #46433A !default;
-
+$tertiary-color: #46433a !default;
 $danger-color: #d9534f;
 
 // Background Color
@@ -66,7 +63,6 @@ $form-font-family: $base-font-family;
 // Navbar
 $navbar-height-base: 50px;
 $navbar-height-md: 70px;
-
 $navbar-logo-width-sm: 45px;
 $navbar-logo-height-sm: auto;
 $navbar-logo-width-md: 90px;
@@ -81,7 +77,6 @@ $screen-lg: 1200px;
 
 // Container
 $container-padding: 15px;
-
 $container-sm: 750px + ($container-padding * 2);
 $container-md: 940px + ($container-padding * 2);
 $container-lg: 1140px + ($container-padding * 2);

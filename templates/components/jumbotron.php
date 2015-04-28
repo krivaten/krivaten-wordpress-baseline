@@ -2,8 +2,7 @@
 	<div class="jumbotron-title">
 		<?php if(is_page('home')) { ?>
 			<h1>
-				empowering <span>believers</span><br />
-				towards <span>missional</span> effectiveness
+				a fancy <span>tagline</span>
 			</h1>
 		<?php } else { ?>
 			<?php if(is_tax()) { ?>
@@ -35,24 +34,6 @@
 					}
 				?>
 			<?php } ?>
-
 		<?php } ?>
-	</div>
-	<div class="jumbotron-footer-container">
-		<div class="jumbotron-footer-callouts">
-			<div class="jumbotron-footer-callout">
-				<a href="<?php echo site_url('products'); ?>">buy soul whisperer</a>
-			</div>
-
-			<div class="jumbotron-footer-callout">
-				<div class="social-icons">
-					<?php require(TEMPLATEPATH . '/templates/components/social-icons.php'); ?>
-				</div>
-			</div>
-
-			<div class="jumbotron-footer-callout">
-				<a href="<?php echo site_url('#email'); ?>">get my weekly blogs</a>
-			</div>
-		</div>
 	</div>
 </section>

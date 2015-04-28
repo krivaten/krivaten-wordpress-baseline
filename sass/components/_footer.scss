@@ -3,11 +3,29 @@
  */
 
 footer {
+	@include media($screen-md) {
+		.footer-row {
+			@include row();
+
+			padding: 0 0;
+
+			> div {
+				@include span-columns(6);
+
+				&:nth-child(even) {
+					text-align: right;
+				}
+			}
+		}
+	}
+
 	padding-top: $container-padding;
 	padding-bottom: $container-padding;
-	border-top: $base-border;
-	font-size: 0.75em;
+
 	color: $tertiary-color;
+	border-top: $base-border;
+
+	font-size: 0.75em;
 
 	span {
 		color: $primary-color;
@@ -15,9 +33,11 @@ footer {
 
 	nav {
 		ul {
-			list-style-type: none;
-			padding: 0;
 			margin: 0;
+			padding: 0;
+
+			list-style-type: none;
+
 			font-size: 0;
 		}
 
@@ -28,31 +48,19 @@ footer {
 				font-size: 15px;
 			}
 			&:after {
-				content: '|';
-				font-size: 15px;
-				text-align: center;
-				margin: 0 5px;
 				display: inline;
+
+				margin: 0 5px;
+
+				content: '|';
+				text-align: center;
+
+				font-size: 15px;
 			}
 
 			&:last-of-type {
 				&:after {
 					content: '';
-				}
-			}
-		}
-	}
-
-	@include media($screen-md) {
-		.footer-row {
-			@include row();
-			padding: 0 0;
-
-			> div {
-				@include span-columns(6);
-
-				&:nth-child(even) {
-					text-align: right;
 				}
 			}
 		}

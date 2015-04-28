@@ -1,10 +1,13 @@
 table {
-	@include font-feature-settings("kern","liga","tnum");
-	border-collapse: collapse;
-	margin: ($base-spacing / 2) 0;
-	table-layout: fixed;
+	@include font-feature-settings('kern','liga','tnum');
+
 	width: 100%;
+	margin: ($base-spacing / 2) 0;
+
+	table-layout: fixed;
+
 	border: 1px solid $base-border-color;
+	border-collapse: collapse;
 }
 
 thead {
@@ -12,9 +15,11 @@ thead {
 }
 
 th {
-	border-bottom: 1px solid $base-border-color;
-	font-weight: bold;
 	text-align: left;
+
+	border-bottom: 1px solid $base-border-color;
+
+	font-weight: bold;
 }
 
 td {
@@ -24,7 +29,6 @@ td {
 td,
 th {
 	padding: ($base-spacing / 2) ($base-spacing / 4);
-
 }
 
 tr,

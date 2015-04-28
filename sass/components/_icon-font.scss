@@ -1,29 +1,31 @@
-@charset "UTF-8";
+@charset 'UTF-8';
 
 @font-face {
-  font-family: "krivaten-icons";
-  src:url("../fonts/krivaten-icons.eot");
-  src:url("../fonts/krivaten-icons.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/krivaten-icons.woff") format("woff"),
-    url("../fonts/krivaten-icons.ttf") format("truetype"),
-    url("../fonts/krivaten-icons.svg#krivaten-icons") format("svg");
-  font-weight: normal;
-  font-style: normal;
+	font-family: 'krivaten-icons';
+	font-weight: normal;
+	font-style: normal;
 
+	src: url('../fonts/krivaten-icons.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/krivaten-icons.woff') format('woff'),
+	url('../fonts/krivaten-icons.ttf') format('truetype'),
+	url('../fonts/krivaten-icons.svg#krivaten-icons') format('svg');
+	src: url('../fonts/krivaten-icons.eot');
 }
 
 [data-icon]:before,
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
-	font-family: "krivaten-icons" !important;
-	font-style: normal !important;
-	font-weight: normal !important;
-	font-variant: normal !important;
+[class^='icon-']:before,
+[class*=' icon-']:before {
 	text-transform: none !important;
-	speak: none;
+
+	font-family: 'krivaten-icons' !important;
+	font-weight: normal !important;
+	font-style: normal !important;
+	font-variant: normal !important;
 	line-height: 1;
+
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	speak: none;
 }
 
 [data-icon]:before {
@@ -31,77 +33,77 @@
 }
 
 .icon-align-justify:before {
-  content: "m";
+	content: 'm';
 }
 .icon-archive:before {
-  content: "d";
+	content: 'd';
 }
 .icon-book:before {
-  content: "e";
+	content: 'e';
 }
 .icon-angle-down:before {
-  content: "f";
+	content: 'f';
 }
 .icon-tags:before {
-  content: "l";
+	content: 'l';
 }
 .icon-clock:before {
-  content: "p";
+	content: 'p';
 }
 .icon-angle-left:before {
-  content: "q";
+	content: 'q';
 }
 .icon-angle-right:before {
-  content: "r";
+	content: 'r';
 }
 .icon-search-find:before {
-  content: "a";
+	content: 'a';
 }
 .icon-blogger:before {
-  content: "b";
+	content: 'b';
 }
 .icon-skype:before {
-  content: "c";
+	content: 'c';
 }
 .icon-pinterest:before {
-  content: "g";
+	content: 'g';
 }
 .icon-linked-in:before {
-  content: "h";
+	content: 'h';
 }
 .icon-instagram:before {
-  content: "i";
+	content: 'i';
 }
 .icon-houzz:before {
-  content: "j";
+	content: 'j';
 }
 .icon-google-plus:before {
-  content: "k";
+	content: 'k';
 }
 .icon-facebook:before {
-  content: "n";
+	content: 'n';
 }
 .icon-twitter:before {
-  content: "o";
+	content: 'o';
 }
 .icon-check-mark-circle:before {
-  content: "u";
+	content: 'u';
 }
 .icon-delete-circle:before {
-  content: "v";
+	content: 'v';
 }
 .icon-minus-circle:before {
-  content: "w";
+	content: 'w';
 }
 .icon-plus-circle:before {
-  content: "x";
+	content: 'x';
 }
 .icon-quote-left:before {
-  content: "y";
+	content: 'y';
 }
 .icon-quote-right:before {
-  content: "z";
+	content: 'z';
 }
 .icon-video-camera:before {
-  content: "s";
+	content: 's';
 }

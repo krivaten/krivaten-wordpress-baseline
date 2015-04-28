@@ -18,10 +18,13 @@
 @import '../vendor/bourbon/app/assets/stylesheets/bourbon';
 
 /**
- * Bitters
+ * Base
  * A type of normalize
  */
-@import 'bitters/base';
+ @import 'base/typography';
+ @import 'base/forms';
+ @import 'base/tables';
+ @import 'base/lists';
 
 /**
  * Neat
@@ -34,14 +37,13 @@
  * Components
  */
 @import 'components/base';
-@import 'components/carousel';
+@import 'components/btns';
 @import 'components/columns';
 @import 'components/icon-font';
 @import 'components/gravity-form';
 @import 'components/gallery';
 @import 'components/list-group';
 @import 'components/responsive-embed';
-@import 'components/simple-share';
 @import 'components/navbar';
 @import 'components/content';
 @import 'components/jumbotron';
@@ -58,5 +60,3 @@
 /**
  * Pages
  */
-@import 'pages/home';
-@import 'pages/videos';

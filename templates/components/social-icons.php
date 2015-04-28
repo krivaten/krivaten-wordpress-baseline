@@ -43,7 +43,7 @@
 	if($urlPinterest != "") {
 		echo '<a href="'.kvt_add_http($urlPinterest).'" title="View Pinterest Page" target="_blank"><i class="icon icon-pinterest"></i></a>';
 	}
-	/*
+
 	$urlEmail = get_option("kvt_email_url");
 	if($urlEmail != "") {
 		echo '<a href="'.kvt_add_http($urlEmail).'" title="View Email Page" target="_blank"><i class="icon icon-envelope"></i></a>';
@@ -53,7 +53,6 @@
 	if($urlYouTube != "") {
 		echo '<a href="'.kvt_add_http($urlYouTube).'" title="View YouTube Page" target="_blank"><i class="icon icon-youtube"></i></a>';
 	}
-	*/
 	$urlSkype = get_option("kvt_skype_url");
 	if($urlSkype != "") {
 		echo '<a href="'.kvt_add_http($urlSkype).'" title="View Skype Page" target="_blank"><i class="icon icon-skype"></i></a>';

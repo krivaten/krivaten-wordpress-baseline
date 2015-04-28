@@ -3,15 +3,18 @@
  */
 .gform_wrapper {
 	ul {
-		list-style-type: none;
 		padding: 0;
+
+		list-style-type: none;
 	}
 	.gfield_required {
 		color: $danger-color;
+
 		font-weight: bold;
 	}
 
-	.gfield_radio, .gfield_checkbox {
+	.gfield_radio,
+	.gfield_checkbox {
 		input {
 			display: none;
 
@@ -27,25 +30,32 @@
 			}
 		}
 		label {
-			line-height: 40px;
-			cursor: pointer;
 			padding-left: 15px;
+
+			cursor: pointer;
+
+			line-height: 40px;
 
 			&:hover {
 				background: darken($white, 5%);
 			}
 			&:before {
 				@include transition(background 0.2s ease-in-out);
+
 				position: relative;
-				display: inline-block;
-				background: rgba($primary-color, 0);
-				content: '';
-				margin-right: 5px;
 				top: 3px;
+
+				display: inline-block;
+
 				width: 1em;
 				height: 1em;
-				border: 1px solid $primary-color;
+				margin-right: 5px;
+
+				content: '';
 				text-align: center;
+
+				border: 1px solid $primary-color;
+				background: rgba($primary-color, 0);
 			}
 		}
 	}
@@ -68,19 +78,24 @@
 	}
 }
 
-.ginput_full, .ginput_left, .ginput_right {
+.ginput_full,
+.ginput_left,
+.ginput_right {
 	label {
-		font-size: 0.75em;
 		margin: -15px 0 0 0;
 		padding-bottom: 15px;
+
+		font-size: 0.75em;
 		font-style: italic;
 	}
 }
 
-.ginput_left, .ginput_right {
+.ginput_left,
+.ginput_right {
 	display: block;
-	width: 49%;
 	float: left;
+
+	width: 49%;
 }
 
 .ginput_left {
@@ -99,36 +114,52 @@
 
 .ginput_complex {
 	@include clearfix();
-
 }
-.validation_message, .validation_error {
+.validation_message,
+.validation_error {
 	clear: both;
-	padding-bottom: 15px;
+
 	margin-top: -15px;
+	padding-bottom: 15px;
+
 	color: $tertiary-color;
+
 	font-style: italic;
 }
 .gform_drop_area {
 	@include clearfix();
-	border-radius: 10px;
+
 	padding: 15px;
+
+	border-radius: 10px;
 	background: $primary-color;
 
 	.gform_drop_instructions {
 		float: left;
+
 		width: 50%;
-		padding-right: 15px;
-		color: $white;
-		text-align: right;
-		line-height: 34px;
 		height: 50px;
+		padding-right: 15px;
+
+		text-align: right;
+
+		color: $white;
+
+		line-height: 34px;
 		line-height: 50px;
 	}
 	.gform_button_select_files {
 		@extend button;
-		background: $white;
-		color: $tertiary-color;
+
 		float: left;
+
 		width: auto;
+
+		color: $tertiary-color;
+		background: $white;
 	}
+}
+
+.gform_button {
+	@extend .btn;
 }

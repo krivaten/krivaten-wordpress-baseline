@@ -1,7 +1,7 @@
 <header class="navbar" role="banner">
 
 	<a href="<?php echo get_option('home'); ?>/" title="<?php bloginfo('name'); ?>" class="navbar-logo">
-		Soul<span>Whisperer</span>
+		<?php bloginfo('name'); ?>
 	</a>
 
 	<button type="button" class="navbar-drawer-trigger btn-link" data-toggle="toggle-drawer">

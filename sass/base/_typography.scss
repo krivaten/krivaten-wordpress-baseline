@@ -1,11 +1,14 @@
 body {
-	@include font-feature-settings("kern","liga","frac", "pnum");
-	-webkit-font-smoothing: antialiased;
-	background-color: $base-background-color;
+	@include font-feature-settings('kern','liga','frac', 'pnum');
+
 	color: $base-font-color;
+	background-color: $base-background-color;
+
 	font-family: $base-font-family;
 	font-size: $base-font-size;
 	line-height: $base-line-height;
+
+	-webkit-font-smoothing: antialiased;
 }
 
 h1,
@@ -14,11 +17,13 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: $header-font-family;
-	line-height: $header-line-height;
-	font-weight: 300;
-	color: $primary-color;
 	margin: 10px 0 5px;
+
+	color: $primary-color;
+
+	font-family: $header-font-family;
+	font-weight: 300;
+	line-height: $header-line-height;
 
 	span {
 		font-weight: 700;
@@ -55,57 +60,67 @@ p {
 
 a {
 	@include transition(color 0.1s linear);
-	color: $base-link-color;
+
 	text-decoration: none;
+
+	color: $base-link-color;
 
 	&:hover {
 		color: $hover-link-color;
 	}
 
-	&:active, &:focus {
+	&:active,
+	&:focus {
 		color: $hover-link-color;
 		outline: none;
 	}
 }
 
 hr {
+	margin: $base-spacing 0;
+
+	border-top: none;
+	border-right: none;
 	border-bottom: $base-border;
 	border-left: none;
-	border-right: none;
-	border-top: none;
-	margin: $base-spacing 0;
 }
 
 img,
 picture {
-	margin: 0;
 	max-width: 100%;
 	height: auto;
+	margin: 0;
 }
 
 blockquote {
-	color: lighten($base-font-color, 15);
 	margin: $base-spacing 0;
 	padding: 0 ($base-spacing / 2);
 
+	color: lighten($base-font-color, 15);
+
 	&:before {
-		content: "y";
-		font-family: $icon-font-family;
-		font-style: normal;
 		position: absolute;
 		top: 0;
 		left: 0;
-		font-size: 3em;
+
+		content: 'y';
+
 		opacity: 0.1;
+
+		font-family: $icon-font-family;
+		font-size: 3em;
+		font-style: normal;
 	}
 }
 
 cite {
 	display: block;
-	font-style: normal;
+
 	text-align: right;
 
+	font-style: normal;
+
 	&:before {
-		content: "\2014 \00A0";
+		content: '\2014 \00A0';
 	}
 }

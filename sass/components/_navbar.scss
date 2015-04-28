@@ -2,158 +2,27 @@
  * Navbar
  */
 body {
-	padding-top: $navbar-height-base;
-
 	@include media($screen-md) {
 		padding-top: $navbar-height-md;
 	}
+
+	padding-top: $navbar-height-base;
 }
 
 .navbar {
-	font-family: $sans-serif-font-family;
-	background: $white;
-	min-height: $navbar-height-base;
-	position: fixed;
-	width: 100%;
-	top: 0;
-	z-index: 1000;
-	border-bottom: 1px solid darken($white, 25%);
-
-	a {
-		color: $primary-color;
-	}
-	.navbar-header {
-		height: $navbar-height-base;
-	}
-
-	.navbar-logo {
-		line-height: ($navbar-height-base - 10);
-		font-size: 1.2em;
-		text-transform: uppercase;
-		position: absolute;
-		top: 5px;
-		left: 5px;
-		color: $primary-color;
-
-		span {
-			color: $black;
-			font-weight: 700;
-		}
-	}
-
-	.navbar-drawer-trigger {
-		@include transition(color 0.2s ease-in-out);
-		color: $primary-color;
-		position: absolute;
-		right: 0;
-		top: 0;
-		padding-right: 35px;
-		background: transparent;
-
-		&:before, &:after {
-			@include transition(all $timing-duration $timing-function);
-			font-family: $base-font-family;
-			font-style: italic;
-			font-size: 0.5em;
-			position: absolute;
-			top: 5px;
-			left: 20px;
-		}
-
-		&:before {
-			@include transform(translateX(0));
-			content: 'open';
-			opacity: 1;
-		}
-
-		&:after {
-			@include transform(translateX(-30px));
-			content: 'close';
-			opacity: 0;
-		}
-
-		.icon {
-			position: absolute;
-			top: 10px;
-			right: 2px;
-			font-size: (4em / 3);
-			line-height: (3em / 4);
-			vertical-align: -15%;
-		}
-	}
-
-	&.navbar-drawer-open {
-
-		.navbar-drawer-trigger {
-
-			&:before {
-				@include transform(translateX(30px));
-				opacity: 0;
-			}
-			&:after {
-				@include transform(translateX(0));
-				opacity: 1;
-			}
-		}
-
-		.navbar-drawer {
-			opacity: 1;
-		}
-	}
-
-	.navbar-drawer {
-		@include transition(all $timing-duration $timing-function);
-		@include transform(translateZ(0));
-		opacity: 0;
-		height: 0;
-		overflow: hidden;
-		margin-top: $navbar-height-base;
-		z-index: -1;
-	}
-
-	.navbar-drawer-content {
-		border-top: 1px solid darken($white, 10%);
-		padding: 10px 0;
-
-		a {
-			display: block;
-			padding: 5px 15px;
-
-			&:hover, &:active {
-				color: $black;
-			}
-		}
-	}
-
-	.navbar-drawer-menu {
-		ul {
-			padding: 0;
-			margin: 0;
-			list-style-type: none;
-		}
-
-		li {
-			height:
-			a {
-				@include transition(all 0.2s ease-in-out);
-				display: block;
-				padding: 5px 10px;
-				background: rgba(darken($white, 10%), 0);
-			}
-		}
-	}
-
 	@include media($screen-md) {
 		min-height: $navbar-height-md;
+
 		border-bottom: 0;
 
-		.navbar-header, .navbar-drawer {
+		.navbar-header,
+		.navbar-drawer {
 			height: $navbar-height-md;
 		}
 
 		.navbar-logo {
-			line-height: ($navbar-height-md - 10);
 			font-size: 1.5em;
+			line-height: ($navbar-height-md - 10);
 
 			img {
 				width: $navbar-logo-width-md;
@@ -166,25 +35,32 @@ body {
 		}
 
 		.navbar-drawer {
-			opacity: 1;
-			overflow: visible;
 			position: absolute;
-			margin-top: 0;
 			top: 0;
+
+			overflow: visible;
+
 			width: 100%;
+			margin-top: 0;
+
+			opacity: 1;
 		}
 
-		.navbar-drawer-menu, .navbar-social-icons {
+		.navbar-drawer-menu,
+		.navbar-social-icons {
 			position: absolute;
 			top: 50%;
 
 			li {
 				a {
-					height: $navbar-height-md;
-					line-height: $navbar-height-md;
-					padding: 0 15px;
 					display: inline-block;
+
+					height: $navbar-height-md;
+					padding: 0 15px;
+
 					color: $black;
+
+					line-height: $navbar-height-md;
 				}
 				&.current-menu-item {
 					a {
@@ -197,6 +73,7 @@ body {
 
 		.navbar-drawer-menu {
 			@include transform(translateY(-50%));
+
 			right: 0;
 
 			li {
@@ -206,11 +83,175 @@ body {
 
 		.navbar-social-icons {
 			@include transform(translateY(-50%));
+
 			right: 15px;
+
 			text-align: center;
 
 			a {
 				font-size: 1em;
+			}
+		}
+	}
+
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+
+	width: 100%;
+	min-height: $navbar-height-base;
+
+	border-bottom: 1px solid darken($white, 25%);
+	background: $white;
+
+	font-family: $sans-serif-font-family;
+
+	a {
+		color: $primary-color;
+	}
+	.navbar-header {
+		height: $navbar-height-base;
+	}
+
+	.navbar-logo {
+		position: absolute;
+		top: 5px;
+		left: 5px;
+
+		text-transform: uppercase;
+
+		color: $primary-color;
+
+		font-size: 1.2em;
+		line-height: ($navbar-height-base - 10);
+
+		span {
+			color: $black;
+
+			font-weight: 700;
+		}
+	}
+
+	.navbar-drawer-trigger {
+		@include transition(color 0.2s ease-in-out);
+
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		padding-right: 35px;
+
+		color: $primary-color;
+		background: transparent;
+
+		&:before,
+		&:after {
+			@include transition(all $timing-duration $timing-function);
+
+			position: absolute;
+			top: 5px;
+			left: 20px;
+
+			font-family: $base-font-family;
+			font-size: 0.5em;
+			font-style: italic;
+		}
+
+		&:before {
+			@include transform(translateX(0));
+
+			content: 'open';
+
+			opacity: 1;
+		}
+
+		&:after {
+			@include transform(translateX(-30px));
+
+			content: 'close';
+
+			opacity: 0;
+		}
+
+		.icon {
+			position: absolute;
+			top: 10px;
+			right: 2px;
+
+			vertical-align: -15%;
+
+			font-size: (4em / 3);
+			line-height: (3em / 4);
+		}
+	}
+
+	&.navbar-drawer-open {
+		.navbar-drawer-trigger {
+			&:before {
+				@include transform(translateX(30px));
+
+				opacity: 0;
+			}
+			&:after {
+				@include transform(translateX(0));
+
+				opacity: 1;
+			}
+		}
+
+		.navbar-drawer {
+			opacity: 1;
+		}
+	}
+
+	.navbar-drawer {
+		@include transition(all $timing-duration $timing-function);
+		@include transform(translateZ(0));
+
+		z-index: -1;
+
+		overflow: hidden;
+
+		height: 0;
+		margin-top: $navbar-height-base;
+
+		opacity: 0;
+	}
+
+	.navbar-drawer-content {
+		padding: 10px 0;
+
+		border-top: 1px solid darken($white, 10%);
+
+		a {
+			display: block;
+
+			padding: 5px 15px;
+
+			&:hover,
+			&:active {
+				color: $black;
+			}
+		}
+	}
+
+	.navbar-drawer-menu {
+		ul {
+			margin: 0;
+			padding: 0;
+
+			list-style-type: none;
+		}
+
+		li {
+			height: a {
+				@include transition(all 0.2s ease-in-out);
+
+				display: block;
+
+				padding: 5px 10px;
+
+				background: rgba(darken($white, 10%), 0);
 			}
 		}
 	}

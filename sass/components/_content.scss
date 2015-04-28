@@ -3,10 +3,10 @@
  */
 .article-well,
 .article-meta {
-	padding: $container-padding;
-	font-size: 80%;
 	margin-top: $container-padding;
+	padding: $container-padding;
 
+	font-size: 80%;
 }
 .article-well {
 	background: lighten($white, 5%);
@@ -15,24 +15,26 @@
 	background: darken($white, 5%);
 
 	> div {
-		padding-left: 1.5em;
 		position: relative;
+
+		padding-left: 1.5em;
 
 		i {
 			position: absolute;
-			left: 0;
 			top: 4px;
+			left: 0;
 		}
 	}
 }
 
 .article-lead {
-	font-style: italic;
 	font-size: 1.25em;
+	font-style: italic;
 	line-height: 1.75em;
 }
 .article-pager {
 	padding: 15px 0;
+
 	list-style-type: none;
 
 	.previous {
@@ -52,16 +54,23 @@ main {
 
 		h2 {
 			text-align: center;
+
+			color: $primary-color;
+
 			font-family: $sans-serif-font-family;
 			font-weight: 300;
-			color: $primary-color;
 		}
 	}
 
 	a {
 		font-weight: bold;
 	}
-	h1, h2, h3, h4, h5, h6 {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
 		a {
 			font-weight: 300;
 		}
