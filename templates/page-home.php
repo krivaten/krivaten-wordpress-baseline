@@ -48,22 +48,22 @@ Template Name: Home Page
 		<div class="product-callouts">
 			<div class="product-callout">
 				<a href="<?php echo site_url('products#laumch-point'); ?>">
-					<img src="<?php bloginfo('url'); ?>/wp-content/uploads/launch-point.png" />
+					<img src="<?php bloginfo('url'); ?>/wp-content/uploads/2015/04/launch-point.png" />
 				</a>
 			</div>
 			<div class="product-callout">
 				<a href="<?php echo site_url('products#first-steps'); ?>">
-					<img src="<?php bloginfo('url'); ?>/wp-content/uploads/first-steps-pack.png" />
+					<img src="<?php bloginfo('url'); ?>/wp-content/uploads/2015/04/first-steps-pack.png" />
 				</a>
 			</div>
 			<div class="product-callout">
 				<a href="<?php echo site_url('products#soul-whisperer'); ?>">
-					<img src="<?php bloginfo('url'); ?>/wp-content/uploads/soul-whisperer.png" />
+					<img src="<?php bloginfo('url'); ?>/wp-content/uploads/2015/04/soul-whisperer.png" />
 				</a>
 			</div>
 			<div class="product-callout">
 				<a href="<?php echo site_url('products#steps-to-faith'); ?>">
-					<img src="<?php bloginfo('url'); ?>/wp-content/uploads/steps-to-faith.png" />
+					<img src="<?php bloginfo('url'); ?>/wp-content/uploads/2015/04/steps-to-faith.png" />
 				</a>
 			</div>
 		</div>

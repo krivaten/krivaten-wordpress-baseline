@@ -2,24 +2,6 @@
 
 <section>
 	<div class="container container-sm">
-		<?php if(is_category('christianity') || is_category('apologetics') || is_category('islam') || is_category('questions')) {
-			$cat = get_query_var('cat');
-			$catObject = get_category($cat);
-			$catSlug = $catObject->slug;
-			$catName = $catObject->name;
-			$categories = get_categories('child_of='.$cat);
-			$uploads = wp_upload_dir();
-			$testUrl = $uploads[path].'/'.$catSlug.'.jpg';
-			$fileUrl = $uploads[baseurl].'/'.$catSlug.'.jpg';
-
-			if(file_exists($testUrl)) {
-
-		?>
-			<div class="article-thumb">
-				<img src="<?php echo $fileUrl;?>" alt="<?php echo $catName;?>" width="100%"/>
-			</div>
-		<?php } ?>
-
 		<article>
 			<?php
 				echo category_description();

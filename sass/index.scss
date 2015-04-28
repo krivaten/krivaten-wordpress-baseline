@@ -15,7 +15,7 @@
  * Bourbon
  * A super mixin library
  */
-@import '../vendor/bourbon/dist/bourbon';
+@import '../vendor/bourbon/app/assets/stylesheets/bourbon';
 
 /**
  * Bitters
@@ -41,6 +41,7 @@
 @import 'components/gallery';
 @import 'components/list-group';
 @import 'components/responsive-embed';
+@import 'components/simple-share';
 @import 'components/navbar';
 @import 'components/content';
 @import 'components/jumbotron';
@@ -51,6 +52,7 @@
  * Shortcodes
  */
 @import 'shortcodes/quote';
+@import 'shortcodes/youtube';
 
 
 /**

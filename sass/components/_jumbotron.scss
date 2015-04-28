@@ -2,7 +2,7 @@
  * Jumbotron
  */
 .jumbotron {
-	padding: 30px 15px;
+	padding: 30px 0;
 	position: relative;
 	background:	$black url(../img/jumbotron.png) center center;
 	background-size: contain;
@@ -26,6 +26,7 @@
 		background:
 			url(../img/gary.png) right bottom no-repeat,
 			$black url(../img/jumbotron.png) center center;
+		background-size: contain, contain;
 
 		h1 {
 			width: 100%;
@@ -51,7 +52,7 @@
 		bottom: 0;
 		width: 100%;
 		background: rgba(255, 255, 255, 0.1);
-		margin: 0 -15px;
+		margin: 0;
 		padding: 5px 15px;
 	}
 	.jumbotron-footer-callouts {
@@ -76,6 +77,7 @@
 
 	@include media($screen-xs) {
 		.home & {
+			background-size: 50%, contain;
 			.jumbotron-title {
 				@include vertical-align();
 			}
@@ -85,6 +87,7 @@
 	@include media($screen-sm) {
 
 		.home & {
+			background-size: 70%, contain;
 			min-height: 650px;
 		}
 		.jumbotron-footer-callouts {
@@ -122,13 +125,14 @@
 
 
 	@include media($screen-md) {
-		.jumbotron-footer-callouts {
-			@include outer-container($container-md);
+		.home & {
+			background-size: 50%, contain;
 		}
-
 	}
 
 	@include media($screen-lg) {
-
+		.home & {
+			background-size: 50%, contain;
+		}
 	}
 }

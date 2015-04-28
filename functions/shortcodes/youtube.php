@@ -5,7 +5,7 @@ function sc_youtube($atts) {
 	), $atts));
 
 	$return = '';
-	$return .= '<div class="embed-responsive embed-responsive-16by9">';
+	$return .= '<div class="embed-responsive embed-responsive-16by9 youtube">';
 		$return .= '<iframe class="embed-responsive-item" src="//www.youtube.com/embed/'.$video.'?rel=0" allowfullscreen></iframe>';
 	$return .= '</div>';
 
