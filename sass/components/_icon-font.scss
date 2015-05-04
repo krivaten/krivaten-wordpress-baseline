@@ -12,9 +12,9 @@
 	src: url('../fonts/krivaten-icons.eot');
 }
 
-[data-icon]:before,
-[class^='icon-']:before,
-[class*=' icon-']:before {
+@include font-face("krivaten-icons", "../fonts/krivaten-icons", $file-formats: eot woff ttf svg);
+
+.icon:before {
 	text-transform: none !important;
 
 	font-family: 'krivaten-icons' !important;
