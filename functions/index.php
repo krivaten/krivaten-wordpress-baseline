@@ -129,6 +129,13 @@ if (function_exists('register_nav_menus')) {
 
 }
 
+/**
+ * Fix call to jQuery before it is loading on Gravity Forms
+ */
+add_filter("gform_init_scripts_footer", "init_scripts");
+	function init_scripts() {
+	return true;
+}
 
 /**
  * Enable shortcodes in widgets
