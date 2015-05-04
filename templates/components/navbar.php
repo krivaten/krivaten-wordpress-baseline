@@ -1,7 +1,7 @@
 <header class="navbar" role="banner">
 
 	<a href="<?php echo get_option('home'); ?>/" title="<?php bloginfo('name'); ?>" class="navbar-logo">
-		<?php bloginfo('name'); ?>
+		<img src="<?php bloginfo('template_directory'); ?>/assets/img/logo.png" />
 	</a>
 
 	<button type="button" class="navbar-drawer-trigger btn-link" data-toggle="toggle-drawer">

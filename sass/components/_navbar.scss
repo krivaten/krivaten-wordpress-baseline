@@ -10,90 +10,6 @@ body {
 }
 
 .navbar {
-	@include media($screen-md) {
-		min-height: $navbar-height-md;
-
-		border-bottom: 0;
-
-		.navbar-header,
-		.navbar-drawer {
-			height: $navbar-height-md;
-		}
-
-		.navbar-logo {
-			font-size: 1.5em;
-			line-height: ($navbar-height-md - 10);
-
-			img {
-				width: $navbar-logo-width-md;
-				height: $navbar-logo-height-md;
-			}
-		}
-
-		.navbar-drawer-trigger {
-			display: none;
-		}
-
-		.navbar-drawer {
-			position: absolute;
-			top: 0;
-
-			overflow: visible;
-
-			width: 100%;
-			margin-top: 0;
-
-			opacity: 1;
-		}
-
-		.navbar-drawer-menu,
-		.navbar-social-icons {
-			position: absolute;
-			top: 50%;
-
-			li {
-				a {
-					display: inline-block;
-
-					height: $navbar-height-md;
-					padding: 0 15px;
-
-					color: $black;
-
-					line-height: $navbar-height-md;
-				}
-				&.current-menu-item {
-					a {
-						color: $black;
-						background: $secondary-color;
-					}
-				}
-			}
-		}
-
-		.navbar-drawer-menu {
-			@include transform(translateY(-50%));
-
-			right: 0;
-
-			li {
-				display: inline-block;
-			}
-		}
-
-		.navbar-social-icons {
-			@include transform(translateY(-50%));
-
-			right: 15px;
-
-			text-align: center;
-
-			a {
-				font-size: 1em;
-			}
-		}
-	}
-
 	position: fixed;
 	z-index: 1000;
 	top: 0;
@@ -102,13 +18,21 @@ body {
 	min-height: $navbar-height-base;
 
 	border-bottom: 1px solid darken($white, 25%);
-	background: $white;
-
+	@include linear-gradient(left, $navbar-background 0%, $white 50%, $navbar-background 100%);
 	font-family: $sans-serif-font-family;
 
 	a {
+		text-transform: lowercase;
 		color: $primary-color;
 	}
+
+	.current-menu-item {
+		a {
+			color: $white;
+			background: $primary-color;
+		}
+	}
+
 	.navbar-header {
 		height: $navbar-height-base;
 	}
@@ -118,23 +42,14 @@ body {
 		top: 5px;
 		left: 5px;
 
-		text-transform: uppercase;
-
-		color: $primary-color;
-
-		font-size: 1.2em;
-		line-height: ($navbar-height-base - 10);
-
-		span {
-			color: $black;
-
-			font-weight: 700;
+		img {
+			height: $navbar-height-base - 10;
 		}
 	}
 
 	.navbar-drawer-trigger {
 		@include transition(color 0.2s ease-in-out);
-
+		outline: none;
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -143,6 +58,7 @@ body {
 
 		color: $primary-color;
 		background: transparent;
+		height: $navbar-height-base;
 
 		&:before,
 		&:after {
@@ -158,6 +74,7 @@ body {
 		}
 
 		&:before {
+
 			@include transform(translateX(0));
 
 			content: 'open';
@@ -233,6 +150,14 @@ body {
 				color: $black;
 			}
 		}
+		.current-menu-item {
+			a {
+				&:hover,
+				&:active {
+					color: $white;
+				}
+			}
+		}
 	}
 
 	.navbar-drawer-menu {
@@ -252,6 +177,80 @@ body {
 				padding: 5px 10px;
 
 				background: rgba(darken($white, 10%), 0);
+			}
+		}
+	}
+
+	@include media($screen-md) {
+		min-height: $navbar-height-md;
+
+		border-bottom: 0;
+
+		.navbar-header,
+		.navbar-drawer {
+			height: $navbar-height-md;
+		}
+
+		.navbar-logo {
+			top: 15px;
+
+			img {
+				height: $navbar-logo-height-md;
+			}
+		}
+
+		.navbar-drawer-trigger {
+			display: none;
+		}
+
+		.navbar-drawer {
+			position: absolute;
+			top: 0;
+
+			overflow: visible;
+
+			width: 100%;
+			margin-top: 0;
+
+			opacity: 1;
+		}
+
+		.navbar-drawer-menu,
+		.navbar-social-icons {
+			position: absolute;
+			top: 50%;
+
+			li {
+				a {
+					display: inline-block;
+
+					height: $navbar-height-md;
+					padding: 0 15px;
+
+					line-height: $navbar-height-md;
+				}
+			}
+		}
+
+		.navbar-drawer-menu {
+			@include transform(translateY(-50%));
+
+			right: 0;
+
+			li {
+				display: inline-block;
+			}
+		}
+
+		.navbar-social-icons {
+			@include transform(translateY(-50%));
+
+			right: 15px;
+
+			text-align: center;
+
+			a {
+				font-size: 1em;
 			}
 		}
 	}

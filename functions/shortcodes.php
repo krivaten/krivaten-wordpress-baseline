@@ -3,8 +3,9 @@
  * Require shortcode files
  */
 // require("shortcodes/accordion.php");
-require("shortcodes/blog.php");
+require("shortcodes/list-blogs.php");
 require("shortcodes/lead.php");
+require("shortcodes/divider.php");
 require("shortcodes/quote.php");
 require("shortcodes/vimeo.php");
 require("shortcodes/well.php");
@@ -22,8 +23,9 @@ function pre_process_shortcode($content) {
 
 	// Add shortcodes
 	// add_shortcode('accordion', 'sc_accordion');
-	add_shortcode('blog', 'sc_blog');
+	add_shortcode('list_blogs', 'sc_list_blogs');
 	add_shortcode('lead', 'sc_lead');
+	add_shortcode('divider', 'sc_divider');
 	add_shortcode('quote', 'sc_quote');
 	add_shortcode("vimeo", "sc_vimeo");
 	add_shortcode('well', 'sc_well');

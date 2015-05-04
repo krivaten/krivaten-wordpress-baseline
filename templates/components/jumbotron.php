@@ -2,7 +2,9 @@
 	<div class="jumbotron-title">
 		<?php if(is_page('home')) { ?>
 			<h1>
-				a fancy <span>tagline</span>
+				<span>together</span>
+				we can make the retreat
+				<span>home again</span>
 			</h1>
 		<?php } else { ?>
 			<?php if(is_tax()) { ?>
