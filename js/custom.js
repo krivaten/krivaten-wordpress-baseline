@@ -28,7 +28,6 @@ jQuery(function($){
 		 * Trigger navbar toggle
 		 */
 		$('[data-toggle="toggle-drawer"]').click(function(evt) {;
-			console.log(evt)
 			var navbar = $('.navbar'),
 				target = navbar.find('.navbar-drawer'),
 				windowWidth = $(window).width(),
@@ -42,7 +41,7 @@ jQuery(function($){
 			} else {
 				// Get height of inner target
 				innerTargetHeight = target.find('.navbar-drawer-content').outerHeight();
-				console.log('HERE', innerTargetHeight);
+
 				// Set height of target
 				target.height(innerTargetHeight);
 			}
