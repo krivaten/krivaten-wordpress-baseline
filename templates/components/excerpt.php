@@ -3,7 +3,7 @@
 		<h4 class="title"><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h4>
 		<div class="entry-content">
 			<?php the_excerpt(); ?>
-			<?php require_once(TEMPLATEPATH . '/templates/components/meta.php' );?>
+			<?php require(TEMPLATEPATH . '/templates/components/meta.php' );?>
 		</div>
 	</article>
 <?php endwhile; ?>
