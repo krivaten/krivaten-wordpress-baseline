@@ -59,8 +59,21 @@ module.exports = function(grunt) {
 			}
 		},
 
+		// compress theme
+		'compress': {
+			development: {
+				options: {
+					pretty: true,
+					mode: 'zip',
+					archive: 'krivaten-theme.zip'
+				},
+				expand: true,
+				src: ['**/*', '!krivaten-theme.zip', '!vendor', '!vendor/**/*', '!node_modules', '!node_modules/**/*']
+			}
+		},
+
 		'csscomb': {
-				dynamic_mappings: {
+			dynamic_mappings: {
 				expand: true,
 				cwd: 'sass',
 				src: ['**/*.scss', '!index.scss', '!base/**/*.scss'],
@@ -73,5 +86,6 @@ module.exports = function(grunt) {
 
 	// register task
 	grunt.registerTask('default', ['sass', 'concat', 'uglify', 'watch']);
+	grunt.registerTask('deploy', ['sass', 'concat', 'uglify', 'compress']);
 	grunt.registerTask('cleanStyles', ['csscomb']);
 };
