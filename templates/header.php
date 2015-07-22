@@ -13,6 +13,7 @@
 
 	<!-- Stylesheet -->
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/assets/css/css.css" />
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700" />
 
 	<!-- Conditional Scripts -->
 	<!--[if lt IE 9]>

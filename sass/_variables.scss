@@ -1,5 +1,5 @@
 // Typography
-$sans-serif-font-family: 'Lato', sans-serif;
+$sans-serif-font-family: 'Open Sans', sans-serif;
 $serif-font-family: 'Merriweather', serif;
 $base-font-family: $serif-font-family;
 $header-font-family: $sans-serif-font-family;
@@ -27,6 +27,8 @@ $base-z-index: 0;
 $black: #000;
 $white: #f5f5f5;
 $green: #bed7bb;
+$green-dark: #8BA488;
+$red: #7f1b1d;
 $primary-color: #7f1b1d !default;
 $secondary-color: #e6e6e6 !default;
 $tertiary-color: #46433a !default;
@@ -62,12 +64,12 @@ $form-font-size: $base-font-size;
 $form-font-family: $base-font-family;
 
 // Navbar
-$navbar-height-base: 50px;
-$navbar-height-md: 70px;
-$navbar-logo-width-sm: 45px;
-$navbar-logo-height-sm: auto;
-$navbar-logo-width-md: 90px;
-$navbar-logo-height-md: auto;
+$navbar-height-xs: 50px;
+$navbar-height-md: 100px;
+$navbar-logo-width-xs: auto;
+$navbar-logo-height-xs: 40px;
+$navbar-logo-width-md: auto;
+$navbar-logo-height-md: 80px;
 
 // Breakpoints
 // $screen-xs: new-breakpoint(max-width 480px);

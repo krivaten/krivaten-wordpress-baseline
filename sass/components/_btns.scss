@@ -55,12 +55,15 @@
 .btn-link {
 	color: $primary-color;
 	border: 0;
-	background: #fff;
+	background: transparent;
 
 	&:hover,
 	&:active,
 	&.active {
 		color: darken($primary-color, 5%);
-		background: darken(#fff, 5%);
+		background: transparent;
+	}
+	&:focus {
+		outline: none;
 	}
 }

@@ -2,32 +2,9 @@
  * Jumbotron
  */
 .jumbotron {
-	@include media($screen-xs) {
-		.home & {
-			.jumbotron-title {
-				@include vertical-align();
-			}
-		}
-	}
-	@include media($screen-sm) {
-		.home & {
-			min-height: 650px;
-		}
-
-		.jumbotron-title {
-			padding-bottom: 50px;
-		}
-
-		h1 {
-			font-size: 4.5em;
-		}
-	}
-
 	position: relative;
 
 	padding: 30px 0;
-
-	background: $black;
 
 	.jumbotron-title {
 		width: 100%;
@@ -36,7 +13,7 @@
 
 		h1,
 		p {
-			color: $white;
+			color: $red;
 		}
 		h1 {
 			margin: 0;
@@ -69,6 +46,27 @@
 
 		span {
 			font-weight: 700;
+		}
+	}
+
+	@include media($screen-xs) {
+		.home & {
+			.jumbotron-title {
+				@include vertical-align();
+			}
+		}
+	}
+	@include media($screen-sm) {
+		.home & {
+			min-height: 650px;
+		}
+
+		.jumbotron-title {
+			padding-bottom: 50px;
+		}
+
+		h1 {
+			font-size: 4.5em;
 		}
 	}
 }
