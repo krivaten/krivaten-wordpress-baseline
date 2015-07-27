@@ -244,6 +244,9 @@ body {
 			}
 		}
 
+		.navbar-drawer-content {
+			border-top: 0;
+		}
 		.navbar-drawer-menu {
 			@include transform(translateY(-50%));
 

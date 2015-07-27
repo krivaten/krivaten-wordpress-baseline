@@ -47,7 +47,7 @@
 
 main {
 	section {
-		padding: 40px 0;
+		padding: 0 0 40px;
 	}
 	.feature {
 		background: $secondary-color;
@@ -62,9 +62,6 @@ main {
 		}
 	}
 
-	a {
-		font-weight: bold;
-	}
 	h1,
 	h2,
 	h3,

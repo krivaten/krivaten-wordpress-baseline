@@ -2,7 +2,7 @@
 	<div class="jumbotron-title">
 		<?php if(is_page('home')) { ?>
 			<h1>
-				a fancy <span>tagline</span>
+				we supply <span>everything</span> but the <span>memory</span>
 			</h1>
 		<?php } else { ?>
 			<?php if(is_tax()) { ?>

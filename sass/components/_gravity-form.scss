@@ -163,3 +163,11 @@
 .gform_button {
 	@extend .btn;
 }
+
+.gform_footer {
+	text-align: right;
+
+	.gform_button {
+		display: inline-block;
+	}
+}
