@@ -6,6 +6,7 @@
 require("shortcodes/blog.php");
 require("shortcodes/lead.php");
 require("shortcodes/quote.php");
+require("shortcodes/item.php");
 require("shortcodes/vimeo.php");
 require("shortcodes/well.php");
 require("shortcodes/youtube.php");
@@ -25,6 +26,7 @@ function pre_process_shortcode($content) {
 	add_shortcode('blog', 'sc_blog');
 	add_shortcode('lead', 'sc_lead');
 	add_shortcode('quote', 'sc_quote');
+	add_shortcode("item", "sc_item");
 	add_shortcode("vimeo", "sc_vimeo");
 	add_shortcode('well', 'sc_well');
 	add_shortcode("youtube", "sc_youtube");
