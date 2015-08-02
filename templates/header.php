@@ -50,7 +50,7 @@
 
 	<?php require_once(TEMPLATEPATH . '/templates/components/navbar.php'); ?>
 
-	<?php require_once(TEMPLATEPATH . '/templates/components/jumbotron.php'); ?>
+	<?php if (!is_page() || is_page('home')) require_once(TEMPLATEPATH . '/templates/components/jumbotron.php'); ?>
 
 	<!--[if lt IE 9]>
 	<div class="container">

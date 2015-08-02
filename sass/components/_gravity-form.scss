@@ -8,8 +8,8 @@
 		list-style-type: none;
 	}
 	.gfield_required {
-		color: $danger-color;
-
+		color: $red;
+		margin-left: 5px;
 		font-weight: bold;
 	}
 

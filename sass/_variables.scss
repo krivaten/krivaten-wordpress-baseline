@@ -7,7 +7,7 @@ $icon-font-family: 'krivaten-icons';
 
 // Font Sizes
 $base-font-size: 1.25em;
-$h1-font-size: $base-font-size * 1.75;
+$h1-font-size: $base-font-size * 3;
 $h2-font-size: $base-font-size * 1.55;
 $h3-font-size: $base-font-size * 1.35;
 $h4-font-size: $base-font-size * 1.15;
@@ -70,7 +70,9 @@ $navbar-height-md: 100px;
 $navbar-logo-width-xs: auto;
 $navbar-logo-height-xs: 40px;
 $navbar-logo-width-md: auto;
-$navbar-logo-height-md: 80px;
+$navbar-logo-height-md: 60px;
+$navbar-logo-width-lg: auto;
+$navbar-logo-height-lg: 80px;
 
 // Breakpoints
 // $screen-xs: new-breakpoint(max-width 480px);

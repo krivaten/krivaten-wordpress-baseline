@@ -269,4 +269,15 @@ body {
 			}
 		}
 	}
+
+	@include media($screen-lg) {
+		.navbar-logo {
+			top: floor(($navbar-height-md - $navbar-logo-height-lg) / 2);
+
+			img {
+				width: $navbar-logo-width-lg;
+				height: $navbar-logo-height-lg;
+			}
+		}
+	}
 }

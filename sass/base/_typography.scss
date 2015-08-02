@@ -11,6 +11,22 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
+
+@font-face {
+  font-family: 'script';
+  font-weight: normal;
+  font-style: normal;
+
+  src: url('../fonts/ScriptMTBold.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/ScriptMTBold.woff') format('woff'),
+	url('../fonts/ScriptMTBold.ttf')  format('truetype'),
+	url('../fonts/ScriptMTBold.svg#ScriptMTBold') format('svg');
+}
+
+.script {
+	font-family: 'script', 'Brush Script MT', cursive;
+}
+
 h1,
 h2,
 h3,
@@ -32,6 +48,7 @@ h6 {
 
 h1 {
 	font-size: $h1-font-size;
+	margin: 40px 0 60px;
 }
 
 h2 {
