@@ -1,22 +1,56 @@
-
-@include media($screen-sm) {
-  .row {
-    @include outer-container;
+@mixin flex-grid($size: xs) {
+  .col--#{$size}-12 {
+    @include span-columns(12);
   }
-
-  .col-1-2 {
-    @include span-columns(6);
+  .col--#{$size}-11 {
+    @include span-columns(11);
   }
-
-  .col-1-4 {
-    @include span-columns(3);
+  .col--#{$size}-10 {
+    @include span-columns(10);
   }
-
-  .col-1-3 {
-    @include span-columns(4);
+  .col--#{$size}-9 {
+    @include span-columns(9);
   }
-  
-  .col-2-3 {
+  .col--#{$size}-8 {
     @include span-columns(8);
   }
+  .col--#{$size}-7 {
+    @include span-columns(7);
+  }
+  .col--#{$size}-6 {
+    @include span-columns(6);
+  }
+  .col--#{$size}-5 {
+    @include span-columns(5);
+  }
+  .col--#{$size}-4 {
+    @include span-columns(4);
+  }
+  .col--#{$size}-3 {
+    @include span-columns(3);
+  }
+  .col--#{$size}-2 {
+    @include span-columns(2);
+  }
+  .col--#{$size}-1 {
+    @include span-columns(1);
+  }
+}
+
+.row {
+  @include outer-container;
+}
+
+@include flex-grid(xs);
+
+@media(min-width: $screen-sm) {
+  @include flex-grid(sm);
+}
+
+@media(min-width: $screen-md) {
+  @include flex-grid(md);
+}
+
+@media(min-width: $screen-lg) {
+  @include flex-grid(lg);
 }

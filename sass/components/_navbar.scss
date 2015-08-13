@@ -212,6 +212,9 @@ body {
 
 			opacity: 1;
 
+			display: inline-block;
+			float: right;
+
 		}
 
 		.navbar-drawer-menu,
@@ -246,11 +249,10 @@ body {
 
 		.navbar-drawer-content {
 			border-top: 0;
+			padding: 0;
 		}
 		.navbar-drawer-menu {
-			@include transform(translateY(-50%));
-
-			right: 0;
+			position: relative;
 
 			li {
 				display: inline-block;
