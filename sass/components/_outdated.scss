@@ -1,0 +1,10 @@
+.outdated {
+  background: $red;
+  text-align: center;
+  padding: 15px;
+  margin: 15px auto;
+
+  &, a, h2 {
+    color: $white;
+  }
+}

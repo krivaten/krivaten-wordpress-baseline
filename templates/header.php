@@ -55,7 +55,7 @@
 		<div class="outdated text-center">
 			<h2 class="text-center">Outdated Browser Warning</h4>
 			<p class="text-center">Using an outdated browser makes your computer unsafe and your viewing experience undesirable. Please consider updating your browser to something more up to take and secure.</p>
-			<p class="text-center">Check out some of the great available options over at  <a href="http://browsehappy.com/" title="Browse Happy" target="_blank" style="font-weight: bold;">Browse Happy</a>.</p>
+			<p class="text-center">Check out some of the great available options over at  <a href="http://browsehappy.com/" title="Browse Happy" target="_blank" style="font-weight: bold; text-decoration: underline;">Browse Happy</a>.</p>
 		</div>
 	</div>
 	<![endif]-->
