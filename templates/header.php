@@ -50,16 +50,16 @@
 
 	<?php require_once(TEMPLATEPATH . '/templates/components/navbar.php'); ?>
 
-	<?php if (!is_page() || is_page('home')) require_once(TEMPLATEPATH . '/templates/components/jumbotron.php'); ?>
-
 	<!--[if lt IE 9]>
 	<div class="container">
-		<div class="alert alert-warning text-center">
+		<div class="outdated text-center">
 			<h2 class="text-center">Outdated Browser Warning</h4>
-			<p class="text-center">While this site will look and work fine for the most part, you are likely missing out on an optimal user experience.</p>
-			<p class="text-center">Do yourself a favor and please upgrade to <a href="https://www.google.com/chrome" title="Google Chrome" target="_blank" style="color: black; font-weight: bold;">Google Chrome</a> or <a href="http://www.mozilla.org/" title="Mozilla Firefox" target="_blank" style="color: black; font-weight: bold;">Mozilla Firefox</a></p>
+			<p class="text-center">Using an outdated browser makes your computer unsafe and your viewing experience undesirable. Please consider updating your browser to something more up to take and secure.</p>
+			<p class="text-center">Check out some of the great available options over at  <a href="http://browsehappy.com/" title="Browse Happy" target="_blank" style="font-weight: bold;">Browse Happy</a>.</p>
 		</div>
 	</div>
 	<![endif]-->
+
+	<?php if (!is_page() || is_page('home')) require_once(TEMPLATEPATH . '/templates/components/jumbotron.php'); ?>
 
 	<main role="main">
