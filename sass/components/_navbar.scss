@@ -212,9 +212,10 @@ body {
 
 			opacity: 1;
 
-			display: inline-block;
+			display: block;
 			float: right;
 
+			z-index: 10;
 		}
 
 		.navbar-drawer-menu,
