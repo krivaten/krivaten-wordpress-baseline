@@ -3,6 +3,7 @@ function sc_item($atts){
 	extract(shortcode_atts(
 		array(
 			'title' => null,
+			'desc' => null,
 			'half' => null,
 			'whole' => null,
 			'price' => null,
@@ -21,7 +22,8 @@ function sc_item($atts){
 			$return .= '<div class="item__content">';
 				$return .= '<h3>'.$title.'</h3>';
 				$return .= '<p>';
-					if ($half)	$return .= 'half $'.$half;
+					if ($desc) $return .= $desc;
+					if ($half) $return .= 'half $'.$half;
 					if ($half && $whole) $return .= ' | ';
 					if ($whole) $return .= 'whole $'.$whole;
 					if ($price) $return .= '$'.$price;
