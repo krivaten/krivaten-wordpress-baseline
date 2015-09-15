@@ -18,7 +18,7 @@ function sc_item($atts){
 	if ($first) $return .= '<div class="items">';
 	$return .= '<div class="col--md-6">';
 		$return .= '<div class="item">';
-			if ($image) $return .= '<img src="'.$image.'" class="item__image">';
+			if ($image) $return .= '<a href="'.$image.'"><img src="'.$image.'" class="item__image"></a>';
 			$return .= '<div class="item__content">';
 				$return .= '<h3>'.$title.'</h3>';
 				$return .= '<p>';
