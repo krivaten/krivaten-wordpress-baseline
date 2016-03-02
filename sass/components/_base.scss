@@ -30,9 +30,41 @@ html {
 
 	padding-right: $container-padding;
 	padding-left: $container-padding;
+
 	&.container-sm {
 		@include media($screen-sm) {
 			max-width: $container-sm;
+		}
+	}
+
+	&.container-sidebar {
+		@include media($screen-sm) {
+			article {
+				float:  left;
+				width: 75%;
+				padding-right: 16px;
+			}
+			aside {
+				float: left;
+				width: 25%;
+				padding-left: 16px;
+
+				ul {
+					list-style: none;
+					padding: 0;
+					margin: 0;
+				}
+
+				li {
+					border-top: 1px solid $gray;
+					padding: 8px 0;
+
+					&:first-child {
+						border-top: 0;
+						padding-top: 0;
+					}
+				}
+			}
 		}
 	}
 }

@@ -19,6 +19,8 @@ function kvt_settings() {
 
 	// Update databse on submit
 	if (isset($_POST["update_settings"])) {
+		$bannerImage = esc_attr($_POST["kvt_banner_url"]);
+		update_option("kvt_banner_url", $bannerImage);
 
 		$emailAdd = esc_attr($_POST["kvt_email_add"]);
 		update_option("kvt_email_add", $emailAdd);
@@ -66,18 +68,19 @@ function kvt_settings() {
 	}
 
 	// Get values for form
-	$emailAdd    	= get_option("kvt_email_add");
-	$phoneNum    	= get_option("kvt_phone_num");
-	$urlBlogger    	= get_option("kvt_blogger_url");
-	$urlFacebook    = get_option("kvt_facebook_url");
-	$urlTwitter     = get_option("kvt_twitter_url");
-	$urlLinkedIn    = get_option("kvt_linkedin_url");
-	$urlHouzz   	= get_option("kvt_houzz_url");
-	$urlInstagram   = get_option("kvt_instagram_url");
-	$urlGoogle      = get_option("kvt_google_url");
-	$urlPinterest   = get_option("kvt_pinterest_url");
-	$urlSkype       = get_option("kvt_skype_url");
-	$urlVideo       = get_option("kvt_video_url");
+	$bannerImage = get_option("kvt_banner_url");
+	$emailAdd = get_option("kvt_email_add");
+	$phoneNum = get_option("kvt_phone_num");
+	$urlBlogger = get_option("kvt_blogger_url");
+	$urlFacebook = get_option("kvt_facebook_url");
+	$urlTwitter = get_option("kvt_twitter_url");
+	$urlLinkedIn = get_option("kvt_linkedin_url");
+	$urlHouzz = get_option("kvt_houzz_url");
+	$urlInstagram = get_option("kvt_instagram_url");
+	$urlGoogle = get_option("kvt_google_url");
+	$urlPinterest = get_option("kvt_pinterest_url");
+	$urlSkype = get_option("kvt_skype_url");
+	$urlVideo = get_option("kvt_video_url");
 
 	$googleAnalytics = get_option("kvt_google_analytics");
 
@@ -86,6 +89,18 @@ function kvt_settings() {
 		<?php screen_icon('themes'); ?> <h2>Krivaten Theme Admin</h2>
 
 		<form method="POST" action="">
+			<h3>Banner Image</h3>
+			<table class="form-table">
+				<tr valign="top">
+					<th scope="row">
+						<label for="kvt_banner_url">Image Url:</label>
+					</th>
+					<td>
+						<input type="text" id="kvt_banner_url" name="kvt_banner_url" value="<?php echo $bannerImage;?>" size="25" />
+					</td>
+				</tr>
+			</table>
+
 			<h3>Contact Information</h3>
 			<table class="form-table">
 				<tr valign="top">

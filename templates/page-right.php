@@ -9,21 +9,11 @@ Template Name: Right Column
 <?php require_once(TEMPLATEPATH . '/templates/header.php'); ?>
 
 <section>
-	<div class="container container-inner">
-		<div class="row row-offcanvas row-offcanvas-right">
-			<div class="col-sm-8">
-				<?php require_once(TEMPLATEPATH . '/templates/components/content.php' ); ?>
-			</div>
-			<div class="col-sm-4 sidebar-offcanvas">
-				<aside>
-					<?php
-						require_once(TEMPLATEPATH . '/templates/components/sub-pages.php' );
-						kvt_sidebar('sidebar-right');
-						kvt_sidebar('sidebar-all');
-					?>
-				</aside>
-			</div>
-		</div>
+	<div class="container container-sidebar">
+		<?php require_once(TEMPLATEPATH . '/templates/components/content.php' ); ?>
+		<aside>
+			<?php kvt_sidebar('sidebar'); ?>
+		</aside>
 	</div>
 </section>
 

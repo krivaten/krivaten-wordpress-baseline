@@ -8,9 +8,7 @@ Template Name: Home Page
 
 <section>
 	<div class="container container-lg">
-		<div class="entry-content">
-			<?php require_once(TEMPLATEPATH . '/templates/components/content.php' ); ?>
-		</div>
+		<?php require_once(TEMPLATEPATH . '/templates/components/content.php' ); ?>
 	</div>
 </section>
 

@@ -1,6 +1,7 @@
 	</main>
 
 	<footer class="container">
+		<?php kvt_sidebar('footer'); ?>
 		<div class="footer-row">
 			<div class="footer-col">
 			<?php

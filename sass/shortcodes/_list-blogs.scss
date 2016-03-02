@@ -4,9 +4,9 @@
 .list-blogs {
 	.list-blogs-post {
 		border-top: 1px solid $gray;
-		padding: 0.25em 0;
+		padding: 16px 0;
 		p {
-			color: $gray;
+			color: $black;
 			margin: 0;
 		}
 		&:first-child {

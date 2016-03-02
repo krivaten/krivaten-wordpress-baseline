@@ -52,7 +52,8 @@ add_theme_support('post-thumbnails');
  * Widget positions
  */
 $kvt_Widgets = array(
-	'Sidebar'
+	'Sidebar',
+	'Footer'
 );
 
 foreach($kvt_Widgets as $widget) {
@@ -70,7 +71,6 @@ foreach($kvt_Widgets as $widget) {
 		));
 
 	}
-
 }
 
 

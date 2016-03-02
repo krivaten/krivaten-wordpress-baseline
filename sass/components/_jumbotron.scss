@@ -6,7 +6,9 @@
 
 	padding: 30px 0;
 
-	background: url(../img/jumbotron.jpg);
+	background: url(../img/jumbotron.jpg) center center;
+	background-size: cover;
+
 
 	.jumbotron-title {
 		width: 100%;

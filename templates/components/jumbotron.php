@@ -1,7 +1,24 @@
-<section class="jumbotron">
+<?php
+	global $wp_query;
+	$postid = $wp_query->post->ID;
+	$banner_image = get_post_meta($postid, 'banner_image', true);
+	$banner_image = $banner_image ? $banner_image : get_option("kvt_banner_url");
+	$banner_text = get_post_meta($postid, 'banner_text', true);
+	$banner_height = get_post_meta($postid, 'banner_height', true);
+	$banner_height = $banner_height ? $banner_height + 60 : "";
+	wp_reset_query();
+?>
+
+<section class="jumbotron" style="
+	<?php if ($banner_image) echo "background-image: url($banner_image);" ?>
+	<?php if ($banner_height) echo "min-height: ".$banner_height."px;" ?>
+">
 	<div class="jumbotron-title">
-		<?php if(is_page('home')) { ?>
+		<?php if($banner_text) { ?>
+			<h1><?php echo $banner_text ?></h1>
+		<?php } elseif(is_page('home')) { ?>
 			<h1>
+				<? echo $urlBlogger; ?>
 				<span>together</span>
 				we can make the retreat
 				<span>home again</span>
